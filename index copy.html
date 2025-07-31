@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaëtan Dammaretz - Développeur Frontend</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Lexend Deca", "sans-serif"], // Une police plus distinctive pour les titres
+            },
+            colors: {
+              "primary-blue": "#1A202C", // Bleu foncé pour les titres
+              "secondary-blue": "#2C5282", // Bleu légèrement plus clair pour les sous-titres
+              "accent-sky": "#0EA5E9", // Bleu ciel pour les accents
+              "light-gray": "#F8FAFC", // Gris très clair pour le fond
+              "text-dark": "#2D3748", // Texte principal
+              "text-light": "#4A5568", // Texte secondaire
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend+Deca:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+      body {
+        background: linear-gradient(135deg, var(--tw-gradient-stops));
+        background-size: 400% 400%;
+        animation: gradientAnimation 15s ease infinite;
+      }
+
+      @keyframes gradientAnimation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .card-hover-effect:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+
+      .section-title::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 3px;
+        background-color: theme("colors.accent-sky");
+        margin-top: 8px;
+        border-radius: 9999px;
+      }
+
+      /* Styles pour les puces de liste personnalisées */
+      ul.custom-list li {
+        position: relative;
+        padding-left: 1.5rem;
+      }
+
+      ul.custom-list li::before {
+        content: "•";
+        color: theme("colors.accent-sky");
+        font-size: 1.2em;
+        position: absolute;
+        left: 0;
+        top: 0.1em;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-br from-light-gray via-blue-50 to-light-gray text-text-dark font-sans min-h-screen flex items-center justify-center py-10"
+  >
+    <main
+      class="max-w-5xl w-full mx-auto p-8 bg-white shadow-2xl rounded-3xl border border-gray-100 transform transition-all duration-300 card-hover-effect"
+    >
+      <header class="mb-10 text-center relative pb-6 border-b border-gray-200">
+        <div
+          class="w-28 h-28 rounded-full bg-gray-200 mx-auto mb-4 flex items-center justify-center overflow-hidden border-4 border-accent-sky shadow-md"
+        >
+          <img src="src/img/my_avatar-300300.png" alt="" srcset="" />
+        </div>
+        <h1
+          class="text-5xl font-display font-bold text-primary-blue leading-tight"
+        >
+          Gaëtan Dammaretz
+        </h1>
+        <p class="text-xl text-secondary-blue font-medium mt-2">
+          Développeur Web Frontend – Intégration & CI/CD
+        </p>
+        <div
+          class="mt-5 text-base text-text-light flex flex-wrap justify-center gap-x-6 gap-y-2"
+        >
+          <p class="flex items-center gap-1">
+            <i class="ph ph-map-pin text-accent-sky"></i> Lille
+          </p>
+          <p class="flex items-center gap-1">
+            <i class="ph ph-envelope text-accent-sky"></i>
+            <a
+              href="mailto:gaetan.dammaretz.dev@gmail.com"
+              class="underline hover:text-accent-sky transition-colors duration-200"
+              >gaetan.dammaretz.dev@gmail.com</a
+            >
+          </p>
+          <p class="flex items-center gap-1">
+            <i class="ph ph-phone text-accent-sky"></i> 06.95.28.57.31
+          </p>
+        </div>
+      </header>
+
+      <section
+        class="mb-10 p-6 bg-blue-50 rounded-2xl border border-blue-100 shadow-inner"
+      >
+        <h2
+          class="text-2xl font-display font-semibold text-primary-blue mb-4 flex items-center gap-3 section-title"
+        >
+          <i class="ph ph-user text-accent-sky text-3xl"></i> Profil
+        </h2>
+        <p class="text-lg leading-relaxed text-text-dark">
+          Développeur web frontend spécialisé dans la conception d’interfaces
+          responsives, accessibles et performantes. Actuellement en poste à la
+          DSI du Conseil d’État, j’interviens sur une application métier
+          complexe (Node.js, PostgreSQL, React) dans un environnement Agile.
+          Curieux, rigoureux et habitué à collaborer avec les équipes UX, SEO et
+          projet, je souhaite mettre mes compétences en intégration et CI/CD au
+          service d’un acteur e-commerce ambitieux.
+        </p>
+      </section>
+
+      <section class="mb-10">
+        <h2
+          class="text-2xl font-display font-semibold text-primary-blue mb-6 flex items-center gap-3 section-title"
+        >
+          <i class="ph ph-briefcase text-accent-sky text-3xl"></i> Expériences
+          professionnelles
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div
+            class="bg-white p-6 rounded-xl border border-gray-200 shadow-md transition-all duration-300 hover:shadow-lg hover:border-accent-sky"
+          >
+            <h3 class="font-display font-bold text-lg text-secondary-blue mb-1">
+              Alternant Développeur Full Stack – DSI Conseil d’État
+            </h3>
+            <p class="italic text-sm text-text-light mb-3">
+              Septembre 2024 – 5 Septembre 2025
+            </p>
+            <ul class="custom-list text-base text-text-dark space-y-1">
+              <li>
+                Conception d’une application CRA (Node.js, PostgreSQL, React,
+                Angular)
+              </li>
+              <li>
+                Intégration responsive d’interfaces métiers (<strong
+                  class="text-accent-sky"
+                  >Figma</strong
+                >
+                → composants dynamiques)
+              </li>
+              <li>CI/CD : GitHub Actions, Render</li>
+              <li>Optimisation performance & accessibilité (WCAG)</li>
+              <li>Travail en équipe Agile</li>
+            </ul>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl border border-gray-200 shadow-md transition-all duration-300 hover:shadow-lg hover:border-accent-sky"
+          >
+            <h3 class="font-display font-bold text-lg text-secondary-blue mb-1">
+              Responsable sûreté – Securitas
+            </h3>
+            <p class="italic text-sm text-text-light mb-3">
+              Janvier 2017 – Mars 2022
+            </p>
+            <p class="text-base text-text-dark">
+              Leadership, gestion de crise, rigueur, coordination d’équipe de 20
+              agents
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl border border-gray-200 shadow-md transition-all duration-300 hover:shadow-lg hover:border-accent-sky"
+          >
+            <h3 class="font-display font-bold text-lg text-secondary-blue mb-1">
+              Assistant clientèle – La Banque Postale
+            </h3>
+            <p class="italic text-sm text-text-light mb-3">
+              Mai 2014 – Janvier 2016
+            </p>
+            <p class="text-base text-text-dark">
+              Relation client, conformité, précision administrative
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl border border-gray-200 shadow-md transition-all duration-300 hover:shadow-lg hover:border-accent-sky"
+          >
+            <h3 class="font-display font-bold text-lg text-secondary-blue mb-1">
+              Adjoint Responsable – Coccy Market
+            </h3>
+            <p class="italic text-sm text-text-light mb-3">
+              Janvier 2009 – Décembre 2013
+            </p>
+            <p class="text-base text-text-dark">
+              Gestion d’équipe, optimisation des stocks et ventes
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2
+          class="text-2xl font-display font-semibold text-primary-blue mb-6 flex items-center gap-3 section-title"
+        >
+          <i class="ph ph-code text-accent-sky text-3xl"></i> Compétences
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-base"
+        >
+          <div
+            class="bg-blue-50 p-5 rounded-xl border border-blue-100 shadow-sm"
+          >
+            <h3
+              class="font-display font-medium text-secondary-blue mb-2 flex items-center gap-2"
+            >
+              <i class="ph ph-browser text-accent-sky"></i> Frontend
+            </h3>
+            <ul class="custom-list space-y-1">
+              <li>HTML5, CSS3, JavaScript ES6+, TypeScript</li>
+              <li>React.js, Angular</li>
+              <li>Responsive, Accessibilité (WCAG)</li>
+              <li><strong class="text-accent-sky">Figma</strong>, Adobe XD</li>
+              <li>Sass, Tailwind CSS</li>
+            </ul>
+          </div>
+          <div
+            class="bg-blue-50 p-5 rounded-xl border border-blue-100 shadow-sm"
+          >
+            <h3
+              class="font-display font-medium text-secondary-blue mb-2 flex items-center gap-2"
+            >
+              <i class="ph ph-git-branch text-accent-sky"></i> CI/CD & DevOps
+            </h3>
+            <ul class="custom-list space-y-1">
+              <li>GitHub Actions, Docker</li>
+              <li>Intégration continue, déploiement automatisé</li>
+            </ul>
+          </div>
+          <div
+            class="bg-blue-50 p-5 rounded-xl border border-blue-100 shadow-sm"
+          >
+            <h3
+              class="font-display font-medium text-secondary-blue mb-2 flex items-center gap-2"
+            >
+              <i class="ph ph-database text-accent-sky"></i> Backend & Bases de
+              données
+            </h3>
+            <ul class="custom-list space-y-1">
+              <li>Node.js, Express</li>
+              <li>PostgreSQL, MySQL</li>
+            </ul>
+          </div>
+          <div
+            class="bg-blue-50 p-5 rounded-xl border border-blue-100 shadow-sm"
+          >
+            <h3
+              class="font-display font-medium text-secondary-blue mb-2 flex items-center gap-2"
+            >
+              <i class="ph ph-lightbulb-filament text-accent-sky"></i>
+              Méthodologie & qualité
+            </h3>
+            <ul class="custom-list space-y-1">
+              <li>Agile (Scrum)</li>
+              <li>Tests (Jest, Postman)</li>
+              <li>Veille technologique</li>
+              <li>
+                <strong class="text-accent-sky">Salesforce</strong> (notions)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2
+          class="text-2xl font-display font-semibold text-primary-blue mb-6 flex items-center gap-3 section-title"
+        >
+          <i class="ph ph-graduation-cap text-accent-sky text-3xl"></i>
+          Formations
+        </h2>
+        <ul class="custom-list text-base text-text-dark space-y-2">
+          <li>
+            <strong class="text-secondary-blue"
+              >Bachelor Développeur Informatique</strong
+            >
+            – Junia Lille (2024 – 2025)
+          </li>
+          <li>
+            <strong class="text-secondary-blue"
+              >BTS Développeur Web & Web Mobile</strong
+            >
+            – M2i Villeneuve d’Ascq (2022 – 2023)
+          </li>
+        </ul>
+      </section>
+
+      <section class="mb-4">
+        <h2
+          class="text-2xl font-display font-semibold text-primary-blue mb-6 flex items-center gap-3 section-title"
+        >
+          <i class="ph ph-translate text-accent-sky text-3xl"></i> Langues &
+          Centres d’intérêt
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-4 text-base text-text-dark"
+        >
+          <div>
+            <p>
+              <strong class="text-secondary-blue">Anglais :</strong> B2 –
+              Lecture & rédaction techniques
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong class="text-secondary-blue">Loisirs :</strong> Veille
+              technologique, calisthénie, footing
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

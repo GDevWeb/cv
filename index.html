@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaëtan Dammaretz - Développeur Frontend</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Lexend Deca", "sans-serif"],
+            },
+            colors: {
+              "primary-blue": "#1A202C",
+              "secondary-blue": "#2C5282",
+              "accent-sky": "#0EA5E9",
+              "accent-indigo": "#4F46E5",
+              "accent-purple": "#8B5CF6",
+              "light-gray": "#F8FAFC",
+              "text-dark": "#2D3748",
+              "text-light": "#4A5568",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend+Deca:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body
+    class="bg-gradient-to-br from-light-gray via-blue-50 to-light-gray text-text-dark font-sans min-h-screen p-4 md:p-8 lg:p-10"
+  >
+    <main
+      class="max-w-5xl w-full mx-auto bg-white shadow-2xl rounded-3xl border border-gray-100 overflow-hidden main-container"
+    >
+      <!-- Éléments décoratifs de design -->
+      <div
+        class="design-element bg-blue-300 w-64 h-64 -top-32 -right-20 opacity-20"
+      ></div>
+      <div
+        class="design-element bg-purple-300 w-80 h-80 -bottom-40 -left-40 opacity-20"
+      ></div>
+
+      <!-- En-tête -->
+      <header class="relative px-8 pt-10 pb-8 border-b border-gray-100">
+        <div
+          class="flex flex-col md:flex-row items-center md:items-start gap-8"
+        >
+          <!-- Photo de profil avec animation -->
+          <div
+            class="profile-img-container w-32 h-32 rounded-full flex items-center justify-center overflow-hidden border-4 border-white"
+          >
+            <img
+              src="src/img/my_avatar-300300.png"
+              alt="Gaëtan Dammaretz"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <!-- Informations principales -->
+          <div class="flex-1 text-center md:text-left">
+            <h1
+              class="text-4xl md:text-5xl font-display font-bold text-primary-blue leading-tight"
+            >
+              Gaëtan
+              <span
+                class="bg-clip-text text-transparent bg-gradient-to-r from-accent-sky to-accent-purple"
+                >Dammaretz</span
+              >
+            </h1>
+            <p class="text-xl text-secondary-blue font-medium mt-1 md:mt-2">
+              Développeur Web Frontend – Intégration & CI/CD
+            </p>
+
+            <!-- Bannière design + code -->
+            <div class="hidden md:block mt-4 mb-4 code-element">
+              <span class="code-keyword">const</span>
+              <span class="code-function">profile</span> = {<br />
+              &nbsp;&nbsp;role:
+              <span class="code-string">"Frontend Developer"</span>,<br />
+              &nbsp;&nbsp;strengths: [<span class="code-string">"UI/UX"</span>,
+              <span class="code-string">"Figma"</span>,
+              <span class="code-string">"Responsive"</span>],<br />
+              &nbsp;&nbsp;passion:
+              <span class="code-string"
+                >"Créer des interfaces élégantes et fonctionnelles"</span
+              ><br />
+              };
+            </div>
+
+            <!-- Coordonnées -->
+            <div
+              class="mt-4 flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2"
+            >
+              <p
+                class="flex items-center gap-1 hover:text-accent-sky transition-all duration-200"
+              >
+                <i class="ph ph-map-pin text-accent-sky"></i> Lille
+              </p>
+              <p class="flex items-center gap-1">
+                <i class="ph ph-envelope text-accent-sky"></i>
+                <a
+                  href="mailto:gaetan.dammaretz.dev@gmail.com"
+                  class="hover:text-accent-sky transition-all duration-200"
+                >
+                  gaetan.dammaretz.dev@gmail.com
+                </a>
+              </p>
+              <!-- <p
+                class="flex items-center gap-1 hover:text-accent-sky transition-all duration-200"
+              >
+                <i class="ph ph-phone text-accent-sky"></i> 06.00.00.00.00
+              </p> -->
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Corps du CV -->
+      <div class="p-8">
+        <!-- Profil -->
+        <section
+          class="mb-10 p-6 bg-gradient-to-br from-blue-50 to-white rounded-2xl border border-blue-100 shadow-sm"
+        >
+          <h2
+            class="text-2xl font-display font-semibold text-primary-blue mb-4 flex items-center gap-3 section-title"
+          >
+            <i class="ph ph-user text-accent-sky text-3xl"></i> Profil
+          </h2>
+          <p class="text-lg leading-relaxed text-text-dark">
+            Développeur web frontend spécialisé dans la conception d'interfaces
+            responsives, accessibles et performantes. Actuellement en poste à la
+            DSI du Conseil d'État, j'interviens sur une application métier
+            complexe (Node.js, PostgreSQL, React) dans un environnement Agile.
+            Curieux, rigoureux et habitué à collaborer avec les équipes UX, SEO
+            et projet, je souhaite mettre mes compétences en
+            <span class="font-semibold text-accent-sky">intégration</span> et
+            <span class="font-semibold text-accent-purple">CI/CD</span> au
+            service d'un acteur e-commerce ambitieux.
+          </p>
+        </section>
+
+        <!-- Compétences -->
+        <section class="mb-10">
+          <h2
+            class="text-2xl font-display font-semibold text-primary-blue mb-6 flex items-center gap-3 section-title"
+          >
+            <i class="ph ph-code text-accent-sky text-3xl"></i> Compétences
+          </h2>
+
+          <!-- Design skills highlight -->
+          <div
+            class="mb-8 p-5 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-2xl border border-blue-100"
+          >
+            <h3
+              class="font-display font-bold text-lg text-primary-blue mb-3 flex items-center gap-2"
+            >
+              <i class="ph ph-palette text-accent-indigo text-2xl"></i> UI/UX &
+              Design
+            </h3>
+
+            <div class="flex flex-wrap gap-3 mb-4">
+              <span class="skill-badge highlight-badge">Figma</span>
+              <span class="skill-badge highlight-badge">Design System</span>
+              <span class="skill-badge">Adobe XD</span>
+              <span class="skill-badge">Responsive Design</span>
+              <span class="skill-badge">Prototypage</span>
+              <span class="skill-badge">Accessibility (WCAG)</span>
+              <span class="skill-badge">UI Components</span>
+            </div>
+          </div>
+
+          <!-- Technical skills -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 text-base"
+          >
+            <div
+              class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:border-accent-sky transition-all duration-300"
+            >
+              <h3
+                class="font-display font-medium text-secondary-blue mb-3 flex items-center gap-2"
+              >
+                <i class="ph ph-browser text-accent-sky"></i> Frontend
+              </h3>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="skill-badge">HTML5</span>
+                <span class="skill-badge">CSS3</span>
+                <span class="skill-badge">JavaScript ES6+</span>
+                <span class="skill-badge">TypeScript</span>
+                <span class="skill-badge">React.js</span>
+                <span class="skill-badge">Angular</span>
+              </div>
+              <ul class="custom-list space-y-1">
+                <li>Développement d'interfaces réactives et performantes</li>
+                <li>Optimisation du rendu et de l'expérience utilisateur</li>
+                <li>Création de composants réutilisables</li>
+              </ul>
+            </div>
+
+            <div
+              class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:border-accent-sky transition-all duration-300"
+            >
+              <h3
+                class="font-display font-medium text-secondary-blue mb-3 flex items-center gap-2"
+              >
+                <i class="ph ph-git-branch text-accent-sky"></i> CI/CD & DevOps
+              </h3>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="skill-badge">GitHub Actions</span>
+                <span class="skill-badge">Docker</span>
+                <span class="skill-badge">Continuous Integration</span>
+              </div>
+              <ul class="custom-list space-y-1">
+                <li>Mise en place de pipelines CI/CD avec GitHub Actions</li>
+                <li>Automatisation des builds, tests et déploiements</li>
+              </ul>
+            </div>
+
+            <div
+              class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:border-accent-sky transition-all duration-300"
+            >
+              <h3
+                class="font-display font-medium text-secondary-blue mb-3 flex items-center gap-2"
+              >
+                <i class="ph ph-stack text-accent-sky"></i> Technologies &
+                Frameworks
+              </h3>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="skill-badge">Tailwind CSS</span>
+                <span class="skill-badge">Sass/SCSS</span>
+                <span class="skill-badge">Node.js</span>
+                <span class="skill-badge">Express</span>
+                <span class="skill-badge">PostgreSQL</span>
+              </div>
+              <ul class="custom-list space-y-1">
+                <li>Développement de sites responsive avec Tailwind CSS</li>
+                <li>Architecture CSS modulaire et maintenable</li>
+                <li>Intégration d'API REST</li>
+              </ul>
+            </div>
+
+            <div
+              class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:border-accent-sky transition-all duration-300"
+            >
+              <h3
+                class="font-display font-medium text-secondary-blue mb-3 flex items-center gap-2"
+              >
+                <i class="ph ph-lightbulb-filament text-accent-sky"></i>
+                Méthodologie & Qualité
+              </h3>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="skill-badge">Agile (Scrum)</span>
+                <span class="skill-badge">Jest</span>
+                <span class="skill-badge">Postman</span>
+                <span class="skill-badge highlight-badge">Salesforce</span>
+              </div>
+              <ul class="custom-list space-y-1">
+                <li>Travail en méthodologie Agile</li>
+                <li>Tests automatisés et manuels</li>
+                <li>Veille technologique constante</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Expériences professionnelles -->
+        <section class="mb-10">
+          <h2
+            class="text-2xl font-display font-semibold text-primary-blue mb-6 flex items-center gap-3 section-title"
+          >
+            <i class="ph ph-briefcase text-accent-sky text-3xl"></i> Expériences
+            professionnelles
+          </h2>
+
+          <div class="timeline-container pl-12 relative">
+            <!-- Ligne de timeline -->
+            <div class="timeline-line"></div>
+
+            <!-- Expérience 1 -->
+            <div class="mb-8 relative">
+              <div class="timeline-dot"></div>
+              <div
+                class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:border-accent-sky"
+              >
+                <h3 class="font-display font-bold text-lg text-secondary-blue">
+                  Alternant Développeur Full Stack – DSI Conseil d'État
+                </h3>
+                <p
+                  class="italic text-sm text-text-light mb-3 flex items-center gap-2"
+                >
+                  <i class="ph ph-calendar"></i> Septembre 2024 – 5 Septembre
+                  2025
+                </p>
+                <ul class="custom-list text-base text-text-dark space-y-1">
+                  <li>
+                    Conception d'une application CRA (Node.js, PostgreSQL,
+                    React, Angular)
+                  </li>
+                  <li>
+                    Intégration responsive d'interfaces métiers (<span
+                      class="font-semibold text-accent-sky"
+                      >Figma</span
+                    >
+                    → composants dynamiques)
+                  </li>
+                  <li>CI/CD : GitHub Actions, Render</li>
+                  <li>Optimisation performance & accessibilité (WCAG)</li>
+                  <li>Travail en équipe Agile</li>
+                </ul>
+
+                <!-- Compétences utilisées -->
+                <div class="mt-4 pt-4 border-t border-gray-100">
+                  <p
+                    class="text-sm text-text-light italic mb-3 flex items-center gap-2"
+                  >
+                    <i class="ph-fill ph-seal-check text-accent-purple"></i>
+                    Lettre de recommandation et projet disponibles sur demande
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="skill-badge">React</span>
+                    <span class="skill-badge">Node.js</span>
+                    <span class="skill-badge highlight-badge">Figma</span>
+                    <span class="skill-badge">PostgreSQL</span>
+                    <span class="skill-badge">GitHub Actions</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Expérience 2 -->
+            <div class="mb-8 relative">
+              <div class="timeline-dot"></div>
+              <div
+                class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:border-accent-sky"
+              >
+                <h3 class="font-display font-bold text-lg text-secondary-blue">
+                  Responsable sûreté – Securitas
+                </h3>
+                <p
+                  class="italic text-sm text-text-light mb-3 flex items-center gap-2"
+                >
+                  <i class="ph ph-calendar"></i> Janvier 2017 – Mars 2022
+                </p>
+                <p class="text-base text-text-dark">
+                  Leadership, gestion de crise, rigueur, coordination d'équipe
+                  de 20 agents. Développement de compétences transversales en
+                  gestion de projet et communication.
+                </p>
+
+                <!-- Compétences transférables -->
+                <div class="mt-4 pt-4 border-t border-gray-100">
+                  <div class="flex flex-wrap gap-2">
+                    <span class="skill-badge">Leadership</span>
+                    <span class="skill-badge">Gestion d'équipe</span>
+                    <span class="skill-badge">Résolution de problèmes</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Expériences précédentes regroupées -->
+            <div class="relative">
+              <div class="timeline-dot"></div>
+              <div
+                class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:border-accent-sky"
+              >
+                <h3 class="font-display font-bold text-lg text-secondary-blue">
+                  Expériences antérieures
+                </h3>
+                <ul class="custom-list text-base text-text-dark space-y-3 mt-3">
+                  <li>
+                    <div>
+                      <strong>Assistant clientèle – La Banque Postale</strong>
+                      <p class="italic text-sm text-text-light">
+                        Mai 2014 – Janvier 2016
+                      </p>
+                      <p>
+                        Relation client, conformité, précision administrative
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <strong>Adjoint Responsable – Coccy Market</strong>
+                      <p class="italic text-sm text-text-light">
+                        Janvier 2009 – Décembre 2013
+                      </p>
+                      <p>Gestion d'équipe, optimisation des stocks et ventes</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Formations -->
+        <section class="mb-10">
+          <h2
+            class="text-2xl font-display font-semibold text-primary-blue mb-6 flex items-center gap-3 section-title"
+          >
+            <i class="ph ph-graduation-cap text-accent-sky text-3xl"></i>
+            Formations
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div
+              class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:border-accent-sky"
+            >
+              <div class="flex items-start gap-4">
+                <div class="bg-blue-50 rounded-lg p-3">
+                  <i class="ph ph-student text-accent-sky text-2xl"></i>
+                </div>
+                <div>
+                  <h3
+                    class="font-display font-bold text-lg text-secondary-blue"
+                  >
+                    Bachelor Développeur Informatique
+                  </h3>
+                  <p class="italic text-sm text-text-light mb-2">
+                    Junia Lille – 2024 - 2025
+                  </p>
+                  <p class="text-base text-text-dark">
+                    Formation complète en développement web et mobile, avec
+                    spécialisation frontend et UI/UX.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:border-accent-sky"
+            >
+              <div class="flex items-start gap-4">
+                <div class="bg-blue-50 rounded-lg p-3">
+                  <i class="ph ph-certificate text-accent-sky text-2xl"></i>
+                </div>
+                <div>
+                  <h3
+                    class="font-display font-bold text-lg text-secondary-blue"
+                  >
+                    BTS Développeur Web & Web Mobile
+                  </h3>
+                  <p class="italic text-sm text-text-light mb-2">
+                    M2i Villeneuve d'Ascq – 2022 - 2023
+                  </p>
+                  <p class="text-base text-text-dark">
+                    Conception et développement d'applications web, focus sur
+                    les technologies frontend modernes et l'expérience
+                    utilisateur.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Langues & Centres d'intérêt -->
+        <section>
+          <h2
+            class="text-2xl font-display font-semibold text-primary-blue mb-6 flex items-center gap-3 section-title"
+          >
+            <i class="ph ph-translate text-accent-sky text-3xl"></i> Langues &
+            Centres d'intérêt
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div
+              class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:border-accent-sky"
+            >
+              <h3
+                class="font-display font-bold text-lg text-secondary-blue mb-2"
+              >
+                Langues
+              </h3>
+              <div class="flex items-center gap-3 mb-3">
+                <span class="font-medium">Anglais:</span>
+                <div class="flex gap-1">
+                  <span class="w-5 h-5 rounded-full bg-accent-sky"></span>
+                  <span class="w-5 h-5 rounded-full bg-accent-sky"></span>
+                  <span class="w-5 h-5 rounded-full bg-accent-sky"></span>
+                  <span class="w-5 h-5 rounded-full bg-accent-sky"></span>
+                  <span class="w-5 h-5 rounded-full bg-blue-100"></span>
+                </div>
+                <span class="text-sm text-text-light">B2</span>
+              </div>
+              <p class="text-text-dark">
+                Lecture & rédaction techniques, documentation, ressources en
+                ligne
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:border-accent-sky"
+            >
+              <h3
+                class="font-display font-bold text-lg text-secondary-blue mb-2"
+              >
+                Centres d'intérêt
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <div
+                  class="flex items-center gap-1 px-3 py-1 bg-blue-50 rounded-full"
+                >
+                  <i class="ph ph-monitor text-accent-sky"></i>
+                  <span>Veille technologique</span>
+                </div>
+                <div
+                  class="flex items-center gap-1 px-3 py-1 bg-blue-50 rounded-full"
+                >
+                  <i class="ph ph-barbell text-accent-sky"></i>
+                  <span>Calisthénie</span>
+                </div>
+                <div
+                  class="flex items-center gap-1 px-3 py-1 bg-blue-50 rounded-full"
+                >
+                  <i class="ph ph-sneaker-move text-accent-sky"></i>
+                  <span>Footing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Pied de page avec contact -->
+      <footer
+        class="mt-10 bg-gradient-to-r from-primary-blue to-secondary-blue text-white p-8 rounded-b-3xl"
+      >
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <div>
+            <h2 class="font-display font-bold text-xl mb-1">
+              Gaëtan Dammaretz
+            </h2>
+            <p class="text-blue-100">
+              Développeur Frontend avec appétence design
+            </p>
+          </div>
+
+          <div class="flex gap-4">
+            <a
+              href="mailto:gaetan.dammaretz.dev@gmail.com"
+              class="contact-button px-4 py-2 rounded-full font-medium"
+            >
+              Me contacter
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
