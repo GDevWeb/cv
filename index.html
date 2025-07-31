@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta
-      name="description"
-      content="CV en ligne de Gaëtan Dammaretz – Développeur Web Frontend, spécialisé en intégration HTML/CSS, accessibilité et CI/CD."
-    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>Gaëtan Dammaretz - Développeur Frontend</title>
     <meta
       name="description"
       content="CV en ligne de Gaëtan Dammaretz – Développeur Web Frontend, spécialisé en intégration HTML/CSS, accessibilité et CI/CD."
     />
+    <meta name="author" content="Gaëtan Dammaretz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#1A202C" />
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:title" content="CV – Gaëtan Dammaretz" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://gdevweb.github.io/cv/" />
@@ -18,7 +22,30 @@
       property="og:description"
       content="Développeur Web Frontend – Portfolio, compétences et expériences professionnelles."
     />
-    <title>Gaëtan Dammaretz - Développeur Frontend</title>
+    <meta
+      property="og:image"
+      content="https://gdevweb.github.io/cv/src/img/og-image-cv.png"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CV – Gaëtan Dammaretz" />
+    <meta
+      name="twitter:description"
+      content="Développeur Frontend – Spécialiste Intégration, UI/UX, CI/CD."
+    />
+    <meta
+      name="twitter:image"
+      content="https://gdevweb.github.io/cv/src/img/og-image-cv.png"
+    />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend+Deca:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind + Icons -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -42,13 +69,15 @@
         },
       };
     </script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend+Deca:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Favicon (optionnel) -->
+    <link rel="icon" type="image/png" href="./assets/icons/favicon.ico" />
   </head>
+
   <body
     class="bg-gradient-to-br from-light-gray via-blue-50 to-light-gray text-text-dark font-sans min-h-screen p-4 md:p-8 lg:p-10"
   >
@@ -73,7 +102,7 @@
             class="profile-img-container w-32 h-32 rounded-full flex items-center justify-center overflow-hidden border-4 border-white"
           >
             <img
-              src="src/img/my_avatar-300300.png"
+              src="./assets/img/my_avatar-300300.png"
               alt="Gaëtan Dammaretz"
               class="w-full h-full object-cover"
             />
@@ -425,6 +454,31 @@
           </h2>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Projet CRA -->
+            <div
+              class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm card-hover-effect"
+            >
+              <h3
+                class="font-display font-bold text-lg text-secondary-blue mb-2"
+              >
+                Application CRA – Conseil d'État (Projet professionnel)
+              </h3>
+              <p class="text-base text-text-dark mb-3">
+                Développement d’une application complète de suivi d’activité
+                pour les agents du Conseil d’État, avec authentification,
+                gestion des rôles, tableaux dynamiques, et CI/CD.
+              </p>
+              <ul class="custom-list text-sm text-text-light mb-3 space-y-1">
+                <li>Angular (SPA), Node.js, MariaDB</li>
+                <li>GitHub Actions, déploiement Render</li>
+                <li>Accessibilité (WCAG), responsive design, sécurité RBAC</li>
+              </ul>
+              <p class="text-sm italic text-accent-purple">
+                Projet non public – disponible sur demande avec lettre de
+                recommandation
+              </p>
+            </div>
+
             <!-- Projet 1 -->
             <div
               class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm card-hover-effect"
@@ -444,7 +498,7 @@
                 <li>Optimisation Lighthouse > 95%</li>
               </ul>
               <a
-                href="https://github.com/GDevWeb/Int-LemonWare"
+                href="https://int-lemon-ware.vercel.app/"
                 target="_blank"
                 rel="noopener"
                 class="text-accent-sky font-medium text-sm hover:underline"
@@ -453,106 +507,33 @@
               </a>
             </div>
 
-            <!-- Projet 2 -->
+            <!-- Projet 3 -->
             <div
               class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm card-hover-effect"
             >
               <h3
                 class="font-display font-bold text-lg text-secondary-blue mb-2"
               >
-                Application CRA (DSI - Conseil d'État)
+                Passion Guitare – site vitrine boutique
               </h3>
               <p class="text-base text-text-dark mb-3">
-                Application métier Angular/Node/MariaDB avec CI/CD GitHub
-                Actions, utilisée en interne pour le suivi d’activité.
-                <strong class="text-accent-purple"
-                  >Projet soumis à autorisation</strong
-                >.
+                Site vitrine simple développé bénévolement pour un ami artisan,
+                afin de présenter sa petite boutique de guitares. Projet initié
+                dans un objectif d’apprentissage du DOM en JavaScript vanilla.
               </p>
               <ul class="custom-list text-sm text-text-light mb-3 space-y-1">
-                <li>SPA Angular</li>
-                <li>API sécurisée Node.js</li>
-                <!-- <li>Déploiement automatisé sur Render</li> -->
+                <li>HTML/CSS, Sass, JavaScript Vanilla</li>
+                <li>Responsive design</li>
+                <li>Pages statiques avec structure légère</li>
               </ul>
               <a
-                href="#"
+                href="https://gdevweb.github.io/PassionGuitar/"
                 target="_blank"
                 rel="noopener"
                 class="text-accent-sky font-medium text-sm hover:underline"
               >
-                <i>à venir</i>
+                Voir la démo
               </a>
-            </div>
-
-            <div
-              class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm card-hover-effect"
-            >
-              <h3
-                class="font-display font-bold text-lg text-secondary-blue mb-2"
-              >
-                <i>à venir</i>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <!-- Formations -->
-        <section class="mb-10">
-          <h2
-            class="text-2xl font-display font-semibold text-primary-blue mb-6 flex items-center gap-3 section-title"
-          >
-            <i class="ph ph-graduation-cap text-accent-sky text-3xl"></i>
-            Formations
-          </h2>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div
-              class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:border-accent-sky"
-            >
-              <div class="flex items-start gap-4">
-                <div class="bg-blue-50 rounded-lg p-3">
-                  <i class="ph ph-student text-accent-sky text-2xl"></i>
-                </div>
-                <div>
-                  <h3
-                    class="font-display font-bold text-lg text-secondary-blue"
-                  >
-                    Bachelor Développeur Informatique et Coordinateur de projet
-                  </h3>
-                  <p class="italic text-sm text-text-light mb-2">
-                    Junia Lille – 2024 - 2025
-                  </p>
-                  <p class="text-base text-text-dark">
-                    Formation complète en développement web et mobile, avec
-                    spécialisation frontend et UI/UX.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:border-accent-sky"
-            >
-              <div class="flex items-start gap-4">
-                <div class="bg-blue-50 rounded-lg p-3">
-                  <i class="ph ph-certificate text-accent-sky text-2xl"></i>
-                </div>
-                <div>
-                  <h3
-                    class="font-display font-bold text-lg text-secondary-blue"
-                  >
-                    BTS Développeur Web & Web Mobile
-                  </h3>
-                  <p class="italic text-sm text-text-light mb-2">
-                    M2i Villeneuve d'Ascq – 2022 - 2023
-                  </p>
-                  <p class="text-base text-text-dark">
-                    Conception et développement d'applications web, focus sur
-                    les technologies frontend modernes et l'expérience
-                    utilisateur.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -623,6 +604,39 @@
             </div>
           </div>
         </section>
+
+        <!-- SECTION LIENS (GitHub + LinkedIn) -->
+        <section class="my-4">
+          <h2
+            class="text-2xl font-display font-semibold text-primary-blue mb-6 flex items-center gap-3 section-title"
+          >
+            <i class="ph ph-link text-accent-sky text-3xl"></i> Liens
+            professionnels
+          </h2>
+          <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <div
+              class="flex flex-col items-center justify-evenly md:flex-row gap-4"
+            >
+              <a
+                href="https://github.com/GDevWeb"
+                target="_blank"
+                rel="noopener"
+                class="flex items-center gap-2 text-accent-sky font-medium text-lg hover:underline"
+              >
+                <i class="ph ph-github-logo text-2xl"></i> GitHub – @gdevweb
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ga%C3%ABtan-dammaretz/"
+                target="_blank"
+                rel="noopener"
+                class="flex items-center gap-2 text-accent-sky font-medium text-lg hover:underline"
+              >
+                <i class="ph ph-linkedin-logo text-2xl"></i> LinkedIn – Profil
+                public
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
 
       <!-- Pied de page avec contact -->
@@ -641,12 +655,19 @@
             </p>
           </div>
 
-          <div class="flex gap-4">
+          <div class="flex flex-col md:flex-row items-center gap-4">
             <a
               href="mailto:gaetan.dammaretz.dev@gmail.com"
               class="contact-button px-4 py-2 rounded-full font-medium"
             >
               Me contacter
+            </a>
+            <a
+              href="./Gaetan-Dammaretz-CV-Frontend.pdf"
+              download
+              class="contact-button px-4 py-2 rounded-full font-medium bg-white text-white hover:bg-blue-50"
+            >
+              Télécharger le CV (PDF)
             </a>
           </div>
         </div>
