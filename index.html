@@ -3,6 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CV en ligne de Gaëtan Dammaretz – Développeur Web Frontend, spécialisé en intégration HTML/CSS, accessibilité et CI/CD."
+    />
+    <meta property="og:title" content="CV – Gaëtan Dammaretz" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gdevweb.github.io/cv/" />
+    <meta
+      property="og:description"
+      content="Développeur Web Frontend – Portfolio, compétences et expériences professionnelles."
+    />
     <title>Gaëtan Dammaretz - Développeur Frontend</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -401,6 +412,68 @@
           </div>
         </section>
 
+        <!-- Projets -->
+        <!-- SECTION PROJETS -->
+        <section class="mb-10">
+          <h2
+            class="text-2xl font-display font-semibold text-primary-blue mb-6 flex items-center gap-3 section-title"
+          >
+            <i class="ph ph-folder-open text-accent-sky text-3xl"></i> Projets
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Projet 1 -->
+            <div
+              class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm card-hover-effect"
+            >
+              <h3
+                class="font-display font-bold text-lg text-secondary-blue mb-2"
+              >
+                Maquette vitrine responsive (Figma → Code)
+              </h3>
+              <p class="text-base text-text-dark mb-3">
+                Intégration from scratch d’une maquette Figma, design
+                mobile-first, composants réutilisables.
+              </p>
+              <ul class="custom-list text-sm text-text-light mb-3 space-y-1">
+                <li>Tailwind CSS</li>
+                <li>Accessibilité (WCAG)</li>
+                <li>Optimisation Lighthouse > 95%</li>
+              </ul>
+              <a
+                href="#"
+                target="_blank"
+                class="text-accent-sky font-medium text-sm hover:underline"
+              >
+                Voir la démo
+              </a>
+            </div>
+
+            <!-- Projet 2 -->
+            <div
+              class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm card-hover-effect"
+            >
+              <h3
+                class="font-display font-bold text-lg text-secondary-blue mb-2"
+              >
+                Application CRA (DSI - Conseil d'État)
+              </h3>
+              <p class="text-base text-text-dark mb-3">
+                Application métier Angular/Node/MariaDB avec CI/CD GitHub
+                Actions, utilisée en interne pour le suivi d’activité.
+                <strong class="text-accent-purple"
+                  >Projet soumis à autorisation</strong
+                >.
+              </p>
+              <ul class="custom-list text-sm text-text-light mb-3 space-y-1">
+                <li>SPA Angular</li>
+                <li>API sécurisée Node.js</li>
+                <!-- <li>Déploiement automatisé sur Render</li> -->
+              </ul>
+            </div>
+          </div>
+        </section>
+
         <!-- Formations -->
         <section class="mb-10">
           <h2
@@ -422,7 +495,7 @@
                   <h3
                     class="font-display font-bold text-lg text-secondary-blue"
                   >
-                    Bachelor Développeur Informatique
+                    Bachelor Développeur Informatique et Coordinateur de projet
                   </h3>
                   <p class="italic text-sm text-text-light mb-2">
                     Junia Lille – 2024 - 2025
