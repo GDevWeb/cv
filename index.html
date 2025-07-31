@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!-- SEO -->
     <title>Gaëtan Dammaretz - Développeur Frontend</title>
     <meta
@@ -13,7 +12,6 @@
     <meta name="author" content="Gaëtan Dammaretz" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#1A202C" />
-
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="CV – Gaëtan Dammaretz" />
     <meta property="og:type" content="website" />
@@ -74,7 +72,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css" />
 
-    <!-- Favicon (optionnel) -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="./assets/icons/favicon.ico" />
   </head>
 
@@ -245,6 +243,44 @@
                 <li>Développement d'interfaces réactives et performantes</li>
                 <li>Optimisation du rendu et de l'expérience utilisateur</li>
                 <li>Création de composants réutilisables</li>
+              </ul>
+            </div>
+
+            <div
+              class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm hover:border-accent-sky transition-all duration-300"
+            >
+              <h3
+                class="font-display font-medium text-secondary-blue mb-3 flex items-center gap-2"
+              >
+                <i class="ph ph-database text-accent-sky"></i> Backend & API
+              </h3>
+
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="skill-badge">Node.js</span>
+                <span class="skill-badge">PostgreSQL / MariaDB</span>
+                <span class="skill-badge">TypeScript</span>
+                <span class="skill-badge">API REST</span>
+                <span class="skill-badge">CI/CD</span>
+                <span class="skill-badge">Swagger</span>
+              </div>
+
+              <ul class="custom-list text-sm text-text-dark space-y-2">
+                <li>
+                  <strong>Node.js</strong> – Création d’API RESTful avec
+                  Express, middlewares personnalisés, logique métier claire
+                </li>
+                <li>
+                  <strong>SQL (PostgreSQL / MariaDB)</strong> – Modélisation
+                  relationnelle, requêtes optimisées, vues & jointures complexes
+                </li>
+                <li>
+                  <strong>TypeScript</strong> – Typage strict côté serveur,
+                  validation d’entrée, DTO & services structurés
+                </li>
+                <li>
+                  <strong>API & Sécurité</strong> – Authentification JWT,
+                  contrôle des rôles (RBAC), documentation via Swagger
+                </li>
               </ul>
             </div>
 
@@ -475,8 +511,16 @@
               </ul>
               <p class="text-sm italic text-accent-purple">
                 Projet non public – disponible sur demande avec lettre de
-                recommandation
+                recommandation dans le cadre d'un entretien
               </p>
+              <a
+                href="https://github.com/GDevWeb/cra-case-study"
+                target="_blank"
+                rel="noopener"
+                class="text-accent-sky font-medium text-sm hover:underline"
+              >
+                Lire la synthèse sur GitHub
+              </a>
             </div>
 
             <!-- Projet 1 -->
@@ -613,7 +657,9 @@
             <i class="ph ph-link text-accent-sky text-3xl"></i> Liens
             professionnels
           </h2>
-          <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <div
+            class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:border-accent-sky"
+          >
             <div
               class="flex flex-col items-center justify-evenly md:flex-row gap-4"
             >
@@ -635,6 +681,65 @@
                 public
               </a>
             </div>
+          </div>
+        </section>
+
+        <!-- Témoignages -->
+        <section class="mb-10">
+          <h2
+            class="text-2xl font-display font-semibold text-primary-blue mb-6 flex items-center gap-3"
+          >
+            <i class="ph ph-chat-teardrop-dots text-accent-sky text-3xl"></i>
+            Témoignages
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Témoignage 1 -->
+            <figure
+              class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col hover:shadow-md transition-all duration-300 hover:border-accent-sky"
+            >
+              <blockquote
+                class="relative border-l-4 border-accent-sky pl-4 flex-grow"
+              >
+                <p class="italic text-text-dark leading-relaxed">
+                  “Ayant eu sous ma responsabilité M. Dammaretz dans ses
+                  fonctions de développeur full stack depuis décembre 2024, je
+                  souhaite vous témoigner de la qualité de son travail et son
+                  professionnalisme sur les différents sujets abordés au cours
+                  de ces derniers mois. En effet, M. Dammaretz a démontré ses
+                  capacités d’adaptation et de réflexion qui lui ont permis de
+                  progresser rapidement au sein de notre service lui permettant
+                  de garantir un travail conforme à nos attentes en termes de
+                  délais et de qualité des livrables. C’est donc avec conviction
+                  que je vous recommande M. Dammaretz.”
+                </p>
+              </blockquote>
+              <figcaption class="mt-4 pt-4 border-t border-gray-100 text-right">
+                <p class="font-semibold text-primary-blue">Caroline B.</p>
+                <p class="text-sm text-text-light italic">
+                  Cheffe de projet, Conseil d'État - DSI
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Témoignage 2 -->
+            <figure
+              class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col hover:shadow-md transition-all duration-300 hover:border-accent-sky"
+            >
+              <blockquote
+                class="relative border-l-4 border-accent-purple pl-4 flex-grow"
+              >
+                <p class="italic text-text-dark leading-relaxed">
+                  “Gaëtan a montré une belle capacité à rebondir et à structurer
+                  ses projets au fil de l’année. Les résultats obtenus sont
+                  satisfaisants et témoignent d’une progression constante.”
+                </p>
+              </blockquote>
+              <figcaption class="mt-4 pt-4 border-t border-gray-100 text-right">
+                <p class="font-semibold text-primary-blue">Stéphane T.</p>
+                <p class="text-sm text-text-light italic">Tuteur FormaSup</p>
+              </figcaption>
+            </figure>
           </div>
         </section>
       </div>

@@ -20,6 +20,7 @@ body {
 }
 
 .main-container {
+  position: relative; /* Ajout pour contenir les éléments de design */
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
     0 8px 10px -6px rgba(0, 0, 0, 0.05), 0 0 50px rgba(14, 165, 233, 0.08);
 }
@@ -232,4 +233,16 @@ ul.custom-list li::before {
 
 .contact-button:hover::before {
   opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .section-title {
+    font-size: 1.75rem; /* Smaller font size for titles */
+  }
+  /* Add more responsive rules as needed */
 }
