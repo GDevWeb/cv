@@ -1,23 +1,23 @@
 # CV en ligne – Gaëtan Dammaretz
 
-Bienvenue sur mon CV en ligne, hébergé via GitHub Pages.  
+Bienvenue sur mon **CV en ligne**, hébergé via GitHub Pages.  
 Je suis **Développeur Web Frontend**, spécialisé en intégration HTML/CSS/JavaScript, accessibilité (WCAG), performances web et déploiement CI/CD.
 
-[Accéder au CV en ligne](https://gdevweb.github.io/cv/)  
- Contact direct : uniquement par mail (voir en-tête du CV)  
- Licence : ce dépôt est à usage personnel. Reproduction interdite sans autorisation.
+- [Accéder au CV en ligne](https://gdevweb.github.io/cv/)
+- [Télécharger le CV en PDF](./src/img/Gaetan-Dammaretz-CV-Frontend.pdf)
+- Contact : uniquement par mail (voir en-tête du CV)
 
 ---
 
 ## Présentation
 
-Ce site est un **CV one-page** responsive, codé en HTML + Tailwind CSS (CDN) + JS léger, dans une logique d'accessibilité et de performance.
+Ce site est un **CV one-page** responsive, entièrement codé à la main en **HTML + Tailwind CSS + JS léger**, avec attention portée sur :
 
-- Responsive (mobile, desktop)
-- Design sobre et accessible
-- Normes WCAG (couleurs, structure, lisibilité)
-- CI/CD prêt à être déployé (GitHub Pages)
-- Données personnelles minimisées (pas de téléphone visible)
+- Responsive design (mobile / desktop)
+- Design sobre, clair et accessible
+- Respect des normes WCAG (contrastes, sémantique, lisibilité)
+- Déploiement automatisé via GitHub Pages
+- Aucune donnée personnelle sensible (ex. téléphone) exposée
 
 ---
 
@@ -25,21 +25,44 @@ Ce site est un **CV one-page** responsive, codé en HTML + Tailwind CSS (CDN) + 
 
 ```bash
 .
-├── index.html           # CV principal
-├── /assets              # (optionnel) icônes, images ou fichiers annexes
-├── /projects            # Page projets (à venir)
-└── README.md
+├── index.html                      # Page principale (CV)
+├── styles.css                      # Styles personnalisés
+├── README.md                       # Présentation du projet
+├── /assets                         # Images (avatar, icônes, logos)
+│   ├── icons/
+│   │   └── favicon.ico
+│   └── img/
+│       ├── logo - Copie.png
+│       └── my_avatar-300300.png
+├── /src/img                        # Fichiers médias exposés (OG, PDF)
+│   ├── og-image-cv.png             # Image Open Graph
+│   └── Gaetan-Dammaretz-CV-Frontend.pdf
+└
 ```
 
 ---
 
-## Projets à venir
+## Projets (en ligne et à venir)
 
-La section [Projets](./projects/) présentera prochainement :
+Section intégrée dans le CV, présentée en **ordre de pertinence** :
 
-- Intégration de maquettes Figma (responsive, accessibilité)
-- Composants UI réutilisables (vanilla, Tailwind, React)
-- Application CRA (Compte Rendu d'Activité) développée à la DSI – si autorisation obtenue
+### 1. Application CRA – Conseil d’État (Projet entreprise)
+
+Projet complexe (Angular, Node.js, CI/CD), actuellement non diffusé publiquement.
+**Un dépôt dédié sans code source** sera publié prochainement avec :
+
+- README détaillé
+- Captures d’écran anonymisées
+- Présentation de la démarche
+
+### 2. Maquette vitrine responsive (Figma → Code)
+
+Projet démontrant l'intégration pixel perfect à partir d'une maquette client.
+Focus : Tailwind CSS, accessibilité, performance Lighthouse.
+
+### 3. Passion Guitare – Boutique vitrine artisanale
+
+Projet bénévole (site statique), réalisé en Vanilla JS + Sass.
 
 ---
 
@@ -47,22 +70,24 @@ La section [Projets](./projects/) présentera prochainement :
 
 - HTML5 sémantique
 - Tailwind CSS via CDN
-- Phosphor Icons (CDN)
-- GitHub Pages
+- Phosphor Icons
+- JavaScript Vanilla
+- GitHub Pages (déploiement CI)
 
 ---
 
 ## Contact
 
 - [gaetan.dammaretz.dev@gmail.com](mailto:gaetan.dammaretz.dev@gmail.com)
-- Lille – ouvert aux opportunités (CDI / CDD/ frontend & fullStack)
-- Profil GitHub : [gdevweb](https://github.com/gdevweb)
+- Lille – disponible pour CDI, CDD ou missions frontend / full-stack JS
+- [Profil GitHub – @GDevWeb](https://github.com/gdevweb)
 
 ---
 
-## Mentions
+## Mentions & Licence
 
-- Ce dépôt ne contient **aucune donnée personnelle sensible** (numéro de téléphone, adresse exacte).
-- L’utilisation ou réutilisation du design et du contenu est **soumise à autorisation écrite**.
+- Ce dépôt ne contient **aucune donnée personnelle sensible**.
+- L’usage ou la reproduction du design, du contenu ou de l’image OG sont **interdits sans autorisation écrite**.
+- © Gaëtan Dammaretz – 2025. Tous droits réservés.
 
 ---
